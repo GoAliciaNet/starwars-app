@@ -15,7 +15,6 @@ const FavoriteProvider = (props) => {
         const favoriteCharacter = isFavorite
             ? state.favorites.filter(favChar => favChar !== favoriteName)     // Delete
             : [...state.favorites, favoriteName] // Add
-        console.log(favoriteName)
         dispatch({
             type: 'GET_FAVORITES',
             payload: favoriteCharacter

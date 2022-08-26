@@ -16,7 +16,6 @@ const CharacterProvider = (props) => {
 
     const getCharacters = async (page) =>{
         const res = await axios.get(`https://swapi.dev/api/people/?page=${page}`)
-        console.log(res.data.results)
         const allCharacters = [...state.characters, ...res.data.results]
         
         dispatch({

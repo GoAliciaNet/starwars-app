@@ -6,7 +6,6 @@ const Favoritos = () => {
     
     const {characters, getCharacters } = useCharacterContext();
     const { favorites, getFavorites } = useFavoriteContext();
-    
 
     useEffect(() => {
         getCharacters();
