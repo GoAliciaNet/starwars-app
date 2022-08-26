@@ -1,13 +1,13 @@
-import {GET_CHARACTERS} from '../types'
+import {GET_FAVORITES} from '../types'
 
 export default (state, action) => {
     const {payload, type} = action; 
 
     switch(type){
-        case GET_CHARACTERS:
+        case GET_FAVORITES:
             return{
                 ...state,
-                characters: payload
+                favorites: payload
             }
     }
 }

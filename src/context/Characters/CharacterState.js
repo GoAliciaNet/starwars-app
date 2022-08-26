@@ -4,34 +4,34 @@ import CharacterContext from "./CharacterContext"
 import axios from "axios"
 import PropTypes from 'prop-types';
 
-const CharacterState = (props) => {
-    const initialState={
+const CharacterProvider = (props) => {
+    const initialState = {
         characters:[],
-        selectedCharacter: null
     }
 
     const [state, dispatch] = useReducer(CharacterReducer, initialState)
 
     const getCharacters = async () =>{
         const res = await axios.get('https://swapi.dev/api/people/')
-        console.log(res)
+        console.log(res.data.results)
+        dispatch({
+            type: 'GET_CHARACTERS',
+            payload: res.data.results
+        })
     }
     
-    // const getProfile = () =>{}
     return (
         <CharacterContext.Provider value={{
             characters: state.characters,
-            selectedCharacter: state.selectedCharacter,
             getCharacters,
-            // getProfile
         }}>
             {props.children}
-            
         </CharacterContext.Provider>
-        
     )
-    
 }
 
+CharacterProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+   }
 
-export default CharacterState
+export default CharacterProvider

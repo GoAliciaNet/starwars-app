@@ -4,13 +4,17 @@ import Home from "./components/Home";
 import Favoritos from "./components/Favoritos";
 import Contact from "./components/Contact";
 
-import CharacterState from "./context/Characters/CharacterState";
+import CharacterProvider from "./context/Characters/CharacterState";
+import FavoriteProvider from "./context/Favorites/FavoriteState";
+
+import 'bootstrap/dist/css/bootstrap.min.css'
   
 function App() {
   
     return (
         <>
-            <CharacterState>
+            <FavoriteProvider>
+            <CharacterProvider>
 			<BrowserRouter>
                 <div 
 				className="container-navbar">
@@ -42,7 +46,8 @@ function App() {
                     <Route exact path="/contact" element={<Contact />} />
                 </Routes>
             </BrowserRouter>
-			</CharacterState>
+			</CharacterProvider>
+            </FavoriteProvider>
         </>
     );
 }
