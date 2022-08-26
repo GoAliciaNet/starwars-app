@@ -4,6 +4,8 @@ import CharacterContext from "./CharacterContext"
 import axios from "axios"
 import PropTypes from 'prop-types';
 
+// const [allCharts, setAllCharts] = useState(1)
+
 const CharacterProvider = (props) => {
     const initialState = {
         characters:[],
@@ -11,9 +13,11 @@ const CharacterProvider = (props) => {
 
     const [state, dispatch] = useReducer(CharacterReducer, initialState)
 
-    const getCharacters = async () =>{
-        const res = await axios.get('https://swapi.dev/api/people/')
+    const getCharacters = async (page) =>{
+        const res = await axios.get(`https://swapi.dev/api/people/?page=${page}`)
         console.log(res.data.results)
+        // setAllCharts([state.characters, ...res.data.results])
+        
         dispatch({
             type: 'GET_CHARACTERS',
             payload: res.data.results

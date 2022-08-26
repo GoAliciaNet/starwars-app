@@ -1,20 +1,38 @@
-import {  useEffect } from 'react'
+import {  useEffect, useState } from 'react'
 import { useCharacterContext } from '../context/Characters/CharacterContext'
 import { useFavoriteContext } from '../context/Favorites/FavoriteContext'
 
 import './Home.css'
 
+    const PAGE_NUMBER = 1
+
 const Home = () => {
+
+    const [page, setPage] = useState(PAGE_NUMBER)
 
     const {characters, getCharacters } = useCharacterContext();
     const { favorites, getFavorites } = useFavoriteContext();
     
+   
 
     useEffect(() => {
-        getCharacters();
+        getCharacters(page);
+     }, [])
+     useEffect(() => {
+        window.onscroll = function (){
+            if(window.innerHeight + document.documentElement.scrollTop
+                === document.documentElement.offsetHeight){
+                    scrollToEnd()
+                }
+        }
      }, [])
 
-    //  const isFavorite = favorites.includes()
+
+     const scrollToEnd = () =>{
+        setPage(page + 1)
+        console.log("PAGE")
+    }
+   
 
     return(
         <div className='container'>
