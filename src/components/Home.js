@@ -6,33 +6,35 @@ import './Home.css'
 
     const PAGE_NUMBER = 1
 
-const Home = () => {
+    const Home = () => {
 
     const [page, setPage] = useState(PAGE_NUMBER)
 
     const {characters, getCharacters } = useCharacterContext();
     const { favorites, getFavorites } = useFavoriteContext();
     
-   
-
     useEffect(() => {
         getCharacters(page);
      }, [])
-     useEffect(() => {
-        window.onscroll = function (){
-            if(window.innerHeight + document.documentElement.scrollTop
-                === document.documentElement.offsetHeight){
-                    scrollToEnd()
-                }
-        }
-     }, [])
 
+     useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+      }, [favorites]);
+
+     useEffect(() => {
+        getCharacters(page);
+     }, [page])
 
      const scrollToEnd = () =>{
         setPage(page + 1)
-        console.log("PAGE")
+        console.log(page)
     }
-   
+
+   window.onscroll = function(){
+    if(Math.round(window.innerHeight + document.documentElement.scrollTop) === document.documentElement.offsetHeight){
+        scrollToEnd();
+    }
+   }
 
     return(
         <div className='container'>
