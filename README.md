@@ -1,70 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Introducción
 
-In the project directory, you can run:
+Starwars o La Guerra de las Galaxias, es una serie de exitosas películas que desde su lanzamiento han tenido mucho éxito, razon por la cual, el numero de fans alrededor del mundo es enorme.
+Es por ello que esta app esta construida para que sus fans puedan consultar el nombre de cada uno de los personajes que participan en la serie y una breve descripcion de algunas de sus caracteristicas principales, como estatura y peso.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Stack tecnológico
 
-### `npm test`
+Esta aplicación due construida con el lenguaje Javascript, y el framework React, aprovechando la herramienta Context para el manejo de estados globales.
+Para el manejo de rutas se utiliza react-router-dom y se instaló prettier y eslint para asegurar que se trabaje con un codigo mas limpio y ordenado, que facilite la lectura para otros desarrolladores.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Secciones
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La aplicacion tiene dos secciones funcionales.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Home
 
-### `npm run eject`
+En esta vista se pueden observar las tarjetas con los nombres y datos de cada uno de los personajes. 
+Los personajes que se muestran son consultados desde una API de 10 en 10 personajes y se van mostrando conforme el usuario va haciendo scroll.
+Se pueden agregar a favoritos o eliminar
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### favoritos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+En esta vista se observan los personajes que se agregaron desde la vista de home, como favoritos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# StarWars App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project setup
+```
+yarn install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
-### Code Splitting
+### Compiles and minifies for production
+```
+yarn build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run your unit tests
+```
+yarn test:unit
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
