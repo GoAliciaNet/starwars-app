@@ -1,19 +1,19 @@
-.container-navbar{
-  display: flex;
-  background: yellow;
-  font-size: 20px;
-  padding: 5px 0 5px 5px;
+.container-navbar {
+	display: flex;
+	background: yellow;
+	font-size: 20px;
+	padding: 5px 0 5px 5px;
 }
-.container-link{
-  margin: 10px;
+.container-link {
+	margin: 10px;
 }
-.active{
-  color: black;
-  text-decoration: none;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.active {
+	color: black;
+	text-decoration: none;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.inactive{
-  color: white;
-  text-decoration: none;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.inactive {
+	color: white;
+	text-decoration: none;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

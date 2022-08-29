@@ -3,11 +3,11 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-  settings:{
-    react:{
-      version: 'detect'
-    }
-  },
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	extends: [
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
@@ -21,6 +21,9 @@ module.exports = {
 	},
 	plugins: ['react'],
 	rules: {
-		"no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+		'no-unused-vars': [
+			'error',
+			{ vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+		],
 	},
 };
